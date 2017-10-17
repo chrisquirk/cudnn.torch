@@ -124,7 +124,7 @@ function RNN:resetRNNDescriptor()
    if not self.rnnDesc then
       self.rnnDesc = self:createRNNDescriptors(1)
    end
-   errcheck('cudnnSetRNNDescriptor',
+   errcheck('cudnnSetRNNDescriptor_v5',
             self.rnnDesc[0],
             self.hiddenSize,
             self.numLayers,
